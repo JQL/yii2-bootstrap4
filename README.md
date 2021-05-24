@@ -73,6 +73,7 @@ Watch the video from ""
       yii\bootstrap\
 ```
 **with:**
+
 ```
       yii\bootstrap4\
 ```
@@ -87,7 +88,8 @@ Watch the video from ""
 ```
 
 7. In the same file, _views/layouts/main.php_, change the css in the Navbar 'options' 'class' as and the footer follows:
-NavBar:
+
+**NavBar:**
 ```
       NavBar::begin([
         'brandLabel' => Yii::$app->name,
@@ -152,7 +154,7 @@ NavBar:
 ```
     'yii\bootstrap4\BootstrapAsset',
 ```
-9. **If you are using an older version of Yii2 which _doesn't_ show the icons in _country/index.php_** then in the root of the bootstrap4 folder create the folder: `components\grid` and inside create the following file **ActionColumn.php**:
+9. <font colour="red">**If you are using an older version of Yii2 which _doesn't_ show the icons in _country/index.php_**</font> then in the root of the bootstrap4 folder create the folder: `components\grid` and inside create the following file **ActionColumn.php**. Note: newer versions of Yii2 have the icons hardcoded into the ActionColumn file so no change is needed:
 ```
 <?php
 
