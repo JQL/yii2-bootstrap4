@@ -25,8 +25,8 @@ These are step-by-step instructions but they assume you have some knowledge of w
 return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=bootstrap4',
-    'username' => 'root', // enter your username
-    'password' => '',     // enter your password
+    'username' => 'root', // ← enter your username
+    'password' => '',     // ← enter your password
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
@@ -37,10 +37,10 @@ return [
 ```
 
 8. Check that everything is working in your browser: http://localhost/bootstrap4/index.php You should see the Yii2 Home Page. Open all the pages on the menu to check they are working correctly.
-9. Create some dummy data for the database. Either download the SQL file or create a migration. **Either** run the following SQL in your database manager: https://github.com/JQL/yii2-bootstrap4/blob/main/bootstrap4.sql **Or** copy the _migrations_ folder: https://github.com/JQL/yii2-bootstrap4/tree/main/migrations and place it in the root of the _bootstrap4_ folder and run ```./yii migrate```. **_Do Not Do Both_** This will create a table called **Country** with some dummy data. Watch the video if you're uncertain as how to do this.
-10. Check that the table exists in your Database Manager.
+9. Create some dummy data for the database. Either download the SQL file or create a migration. **Either** run the following SQL in your database manager: https://github.com/JQL/yii2-bootstrap4/blob/main/bootstrap4.sql **Or** copy the _migrations_ folder: https://github.com/JQL/yii2-bootstrap4/tree/main/migrations and place it in the root of the _bootstrap4_ folder and run ```./yii migrate```. **_Do Not Do Both_** Note: This will create a table called **Country** with some dummy data. Watch the video if you're uncertain as how to do this.
+10. Check that the table exists and is populated with data in your Database Manager.
 11. Start GII http://localhost/bootstrap4/gii and create a Model called **County** using your default settings. Watch the video if you're uncertain as to which settings to use.
-12. Create a "CRUD" for the Model using your favourite settings. Watch the video if you're uncertain as to which settings to use.
+12. Create "CRUD" for the Model using your favourite settings. Watch the video if you're uncertain as to which settings to use.
 13. Check it works by running: http://localhost/bootstrap4/country
 14. Add a link to the _views/layouts/main.php_ in the "Nav::widget" to make it easier to access the country page.
 
@@ -48,7 +48,10 @@ return [
       ['label' => 'Country', 'url' => ['/country/index']],
 ```
 
-### Installing Twitter Bootstrap 4
+We now have a fully operational site using Yii2 and Bootstrap 3
+
+
+### Installing and configuring Twitter Bootstrap 4 on Yii2
 Watch the video from ""
 1. Open Terminal in your _htdocs/bootstrap4_ folder. It is essential you are in the root of your _bootstrap4_ folder.
 2. Uninstall Bootstrap 3 from Yii2:
@@ -63,7 +66,7 @@ Watch the video from ""
       composer require yiisoft/yii2-bootstrap4
 ```
 
-4. If you try to open http://localhost/bootstrap4 you will get errors. **This is normal.**
+4. If you try to open http://localhost/bootstrap4 you will get errors. **This is normal.** We are now going to fix those errors.
 5. Using Search and Replace but **excluding** the _vendor_ folder replace the following in all the PHP files:
 
 ```
@@ -146,9 +149,9 @@ class ActionColumn extends yii\grid\ActionColumn
 
     protected function initDefaultButtons()
     {
-        $this->initDefaultButton('view', 'eye-open');
-        $this->initDefaultButton('update', 'pencil');
-        $this->initDefaultButton('delete', 'trash', [
+        $this->initDefaultButton('view', 'bi bi-eye'); //  'eye-open'
+        $this->initDefaultButton('update', 'bi bi-pencil'); //  'pencil'
+        $this->initDefaultButton('delete', 'bi bi-trash', [ //  'trash'
             'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
             'data-method' => 'post',
         ]);
