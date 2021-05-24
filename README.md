@@ -154,7 +154,7 @@ Watch the video from ""
 ```
     'yii\bootstrap4\BootstrapAsset',
 ```
-9. <font colour="red">**If you are using an older version of Yii2 which _doesn't_ show the icons in _country/index.php_**</font> then in the root of the bootstrap4 folder create the folder: `components\grid` and inside create the following file **ActionColumn.php**. Note: newer versions of Yii2 have the icons hardcoded into the ActionColumn file so no change is needed:
+9. <font colour="red">**If you are using an older version of Yii2 which _doesn't_ show the icons in _country/index.php_**</font>  then in the root of the bootstrap4 folder create the folder: `components\grid` and inside create the following file **ActionColumn.php**. Note: newer versions of Yii2 have the icons hardcoded into the ActionColumn file so no change is needed:
 ```
 <?php
 
