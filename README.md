@@ -212,7 +212,7 @@ class ActionColumn extends yii\grid\ActionColumn
 ```
 
 10. In <i>views/country/&#95;form.php</i> replace the two instances of **widgets** with **bootstrap4**
-11. In _views/country/index.php_ after `'dataProvider' => $dataProvider,` add: `'pager'=>['class' => \yii\bootstrap4\LinkPager::class],` This fixes the pager widget.
+11. In _views/country/index.php_ and _views/country/list.php_ after `'dataProvider' => $dataProvider,` add: `'pager'=>['class' => \yii\bootstrap4\LinkPager::class],` This fixes the pager widget.
 12. Open http://localhost/bootstrap4 in your browser and check everything works.
 
 
