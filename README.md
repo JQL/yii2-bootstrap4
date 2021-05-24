@@ -35,5 +35,14 @@ return [
 ];
 ```
 
-8. Check that everything is working in your browser: http://localhost/bootstrap4/web/index.php You should see the Yii2 Home Page. Open all the pages on the menu to check they are working correctly.
-9. Create some dummy data for the database. Either download the SQL file or create a migration. **Either** run the sql in your database manager: https://github.com/JQL/yii2-bootstrap4/blob/main/bootstrap4.sql **Or** copy the _migrations_ folder: https://github.com/JQL/yii2-bootstrap4/tree/main/migrations and place it in the root of the _bootstrap4_ folder and run ```./yii migrate```. **_Do Not Do Both_**
+8. Check that everything is working in your browser: http://localhost/bootstrap4/index.php You should see the Yii2 Home Page. Open all the pages on the menu to check they are working correctly.
+9. Create some dummy data for the database. Either download the SQL file or create a migration. **Either** run the following SQL in your database manager: https://github.com/JQL/yii2-bootstrap4/blob/main/bootstrap4.sql **Or** copy the _migrations_ folder: https://github.com/JQL/yii2-bootstrap4/tree/main/migrations and place it in the root of the _bootstrap4_ folder and run ```./yii migrate```. **_Do Not Do Both_** This will create a table called **Country** with some dummy data. Watch the video if you're uncertain as how to do this.
+10. Check that the table exists in your Database Manager.
+11. Start GII http://localhost/bootstrap4/gii and create a Model called **County** using your default settings. Watch the video if you're uncertain as to which settings to use.
+12. Create a "CRUD" for the Model using your favourite settings. Watch the video if you're uncertain as to which settings to use.
+13. Check it works by running: http://localhost/bootstrap4/country
+14. Add a link in the "Nav::widget" to the _views/layouts/main.php_ to make it easier to access the country page.
+```
+  ['label' => 'Country', 'url' => ['/country/index']],
+```
+
