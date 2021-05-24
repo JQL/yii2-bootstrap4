@@ -178,6 +178,7 @@ class ActionColumn extends yii\grid\ActionColumn
                 ], $additionalOptions, $this->buttonOptions);
                 $icon = isset($this->icons[$iconName])
                     ? $this->icons[$iconName]
+                    //  : Html::tag('span', '', ['class' => "glyphicon glyphicon-$iconName"]);
                     : Html::tag('span', '', ['class' => $iconName]);
                 return Html::a($icon, $url, $options);
             };
@@ -188,3 +189,7 @@ class ActionColumn extends yii\grid\ActionColumn
 
 10. In _views/country/_form.php_ replace the two instances of **widgets** with **bootstrap4**
 11. In _views/country/_index.php_ after `'dataProvider' => $dataProvider,` add: `'pager'=>['class' => \yii\bootstrap4\LinkPager::class],`
+12. Open http://localhost/bootstrap4 in your browser and check everything works.
+
+
+All done. If you use GII to create CRUD or forms etc. you will need to edit the created files to use bootstrap4.
