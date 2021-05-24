@@ -113,7 +113,8 @@ Watch the video from ""
 ```
 
 8. In _assets/AppAsset.php_ make the following changes:
-In the $css add the CDN for Bootstrap Icons:
+
+a). In the $css add the CDN for Bootstrap Icons:
 ```
     public $css = [
         'css/site.css',
@@ -121,7 +122,7 @@ In the $css add the CDN for Bootstrap Icons:
     ];
 ```
 
-In the $depend" change:
+b). In the $depend" change:
 ```
     'yii\bootstrap\BootstrapAsset',
 ```
