@@ -77,18 +77,17 @@ Watch the video from ""
       yii\bootstrap4\
 ```
 
-6. In _views/layouts/main.php_ change these two "use" lines:
+6. In _views/layouts/main.php_ change this "use" line:
 ```
-      use app\widgets\Alert;
       use yii\widgets\Breadcrumbs;
 ```
 **to:**
 ```
-      use app\bootstrap4\Alert;
       use yii\bootstrap4\Breadcrumbs;
 ```
 
-7. In the same file, _views/layouts/main.php_, change the css in the Navbar 'options' 'class' as follows:
+7. In the same file, _views/layouts/main.php_, change the css in the Navbar 'options' 'class' as and the footer follows:
+NavBar:
 ```
       NavBar::begin([
         'brandLabel' => Yii::$app->name,
@@ -114,7 +113,26 @@ Watch the video from ""
         'options' => ['class' => 'navbar-nav ml-auto'],
 [...]
 ```
+**Footer:**
+```
+<footer class="footer">
+  <div class="container">
+    <p class="pull-left">&copy; J. Lavelle <?= date('Y') ?></p>
 
+              <p class="pull-right"><?= Yii::powered() ?></p>
+        </div>
+</footer>
+```
+**to:**
+```
+<footer class="footer">
+  <div class="container">
+    <p class="float-left">&copy; J. Lavelle <?= date('Y') ?></p>
+
+              <p class="float-right"><?= Yii::powered() ?></p>
+        </div>
+</footer>
+```
 8. In _assets/AppAsset.php_ make the following changes:
 
     a). In the $css add the CDN for Bootstrap Icons:
@@ -134,7 +152,7 @@ Watch the video from ""
 ```
     'yii\bootstrap4\BootstrapAsset',
 ```
-9. In the root of the bootstrap4 folder create the folder: `components\grid` and inside create the following file **ActionColumn.php**:
+9. **If you are using an older version of Yii2 which _doesn't_ show the icons in _country/index.php_** then in the root of the bootstrap4 folder create the folder: `components\grid` and inside create the following file **ActionColumn.php**:
 ```
 <?php
 
