@@ -96,6 +96,7 @@ Watch the video from ""
       ]);
       echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
+[...]
 ```
 **to:**
 ```
@@ -108,4 +109,5 @@ Watch the video from ""
       ]);
       echo Nav::widget([
         'options' => ['class' => 'navbar-nav ml-auto'],
+[...]
 ```
