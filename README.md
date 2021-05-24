@@ -13,3 +13,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ## How to:
 
+1. Download and install Composer if you haven't already done so: https://getcomposer.org/download/
+2. Update Composer if required: `composer selfupdate`
+3. Download Yii2 BASIC into the **bootstrap4** folder of your **_htdocs_** folder: `composer create-project --prefer-dist yiisoft/yii2-app-basic bootstrap4`
+4. Create a database called **bootstrap4**
