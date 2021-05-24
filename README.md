@@ -34,8 +34,6 @@ return [
     //'schemaCache' => 'cache',
 ];
 ```
-8. Check that everything is working in your browser: http://localhost/bootstrap4/web/index.php You should see the Yii2 Home Page. Open all the pages on the menu to check they are working correctly.
-9. Create some dummy data for the database. Either download the SQL file or create a migration.
 
-a. **Either** run the sql in your database manager: https://github.com/JQL/yii2-bootstrap4/blob/main/bootstrap4.sql
-b. **Or** copy the _migrations_ folder: https://github.com/JQL/yii2-bootstrap4/tree/main/migrations and place it in the root of the _bootstrap4_ folder
+8. Check that everything is working in your browser: http://localhost/bootstrap4/web/index.php You should see the Yii2 Home Page. Open all the pages on the menu to check they are working correctly.
+9. Create some dummy data for the database. Either download the SQL file or create a migration. **Either** run the sql in your database manager: https://github.com/JQL/yii2-bootstrap4/blob/main/bootstrap4.sql **Or** copy the _migrations_ folder: https://github.com/JQL/yii2-bootstrap4/tree/main/migrations and place it in the root of the _bootstrap4_ folder and run ```./yii migrate```. **_Do Not Do Both_**
