@@ -12,7 +12,7 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## How to:
-These are step-by-step instructions but they assume you have some knowledge of web programming, PHP, HTML, CSS and dtabase setup.
+These are step-by-step instructions but they assume you have some knowledge of web programming, PHP, HTML, CSS and database setup.
 ### Preparation
 1. Download and install Composer if you haven't already done so: https://getcomposer.org/download/
 2. Update Composer if required (version 2 required): `composer selfupdate`
@@ -48,3 +48,25 @@ return [
 ```
 
 ### Installing Twitter Bootstrap 4
+Watch the video from ""
+1. Open Terminal in your _htdocs/bootstrap4_ folder. It is essential you are in the root of your _bootstrap4_ folder.
+2. Uninstall Bootstrap 3 from Yii2:
+```
+  composer remove yiisoft/yii2-bootstrap
+```
+
+3. Install Bootstrap 4:
+```
+  composer require yiisoft/yii2-bootstrap4
+```
+
+4. If you try to open http://localhost/bootstrap4 you will get errors. **This is normal.**
+5. Using Search and Replace but **excluding** the _vendor_ folder replace:
+```
+  yii\bootstrap\
+
+with
+
+yii\bootstrap4
+```
+
