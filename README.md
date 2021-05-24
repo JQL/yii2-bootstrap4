@@ -85,17 +85,17 @@ Watch the video from ""
       use yii\bootstrap4\Breadcrumbs;
 ```
 
-7. In the same file change the css in the Navbar as follows:
+7. In the same file, _views/layouts/main.php_, change the css in the Navbar 'options' 'class' as follows:
 ```
       NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-          'class' => 'navbar-inverse navbar-fixed-top',
+          'class' => 'navbar-inverse navbar-fixed-top', // ← change this line
         ],
       ]);
       echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'navbar-nav navbar-right'], // ← change this line
 [...]
 ```
 **to:**
@@ -111,3 +111,23 @@ Watch the video from ""
         'options' => ['class' => 'navbar-nav ml-auto'],
 [...]
 ```
+
+8. In _assets/AppAsset.php_ make the following changes:
+In the $css add the CDN for Bootstrap Icons:
+```
+    public $css = [
+        'css/site.css',
+        'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css', // ← add this line
+    ];
+```
+
+In the $depend" change:
+```
+    'yii\bootstrap\BootstrapAsset',
+```
+**to:**
+```
+    'yii\bootstrap4\BootstrapAsset',
+```
+9. In _views/country/_form.php_ replace the two instances of **widgets** with **bootstrap4**
+10. In _views/country/_index.php_
