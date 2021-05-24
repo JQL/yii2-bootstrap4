@@ -4,9 +4,9 @@
 
 use app\widgets\Alert;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
+use yii\bootstrap4\Nav;
+use yii\bootstrap4\NavBar;
+use yii\bootstrap4\Breadcrumbs;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
@@ -31,11 +31,11 @@ AppAsset::register($this);
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-          'class' => 'navbar-inverse navbar-fixed-top',
+          'class' => 'navbar-expand-lg navbar-dark bg-dark fixed-top',
         ],
       ]);
       echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'navbar-nav ml-auto'],
         'items' => [
           ['label' => 'Home', 'url' => ['/site/index']],
           ['label' => 'Country', 'url' => ['/country/index']],
@@ -66,19 +66,19 @@ AppAsset::register($this);
         ])
         ?>
         <?= Alert::widget() ?>
-<?= $content ?>
+        <?= $content ?>
       </div>
     </div>
 
     <footer class="footer">
       <div class="container">
-        <p class="pull-left">&copy; J. Lavelle <?= date('Y') ?></p>
+        <p class="float-left">&copy; J. Lavelle <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="float-right"><?= Yii::powered() ?></p>
       </div>
     </footer>
 
-<?php $this->endBody() ?>
+    <?php $this->endBody() ?>
   </body>
 </html>
 <?php $this->endPage() ?>
