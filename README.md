@@ -1,6 +1,6 @@
-### How to upgrade YII2 to Twitter Bootstrap 4
+# How to upgrade YII2 to Twitter Bootstrap 4
 
-© 2021 J. Lavelle all rights reserved
+© 2021 J. Lavelle (http://jlavelle.uk) all rights reserved
 
 ## Licence
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
