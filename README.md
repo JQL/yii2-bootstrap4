@@ -114,7 +114,7 @@ Watch the video from ""
 
 8. In _assets/AppAsset.php_ make the following changes:
 
-a). In the $css add the CDN for Bootstrap Icons:
+    a). In the $css add the CDN for Bootstrap Icons:
 ```
     public $css = [
         'css/site.css',
@@ -122,7 +122,7 @@ a). In the $css add the CDN for Bootstrap Icons:
     ];
 ```
 
-b). In the $depend" change:
+    b). In the $depend" change \bootstrap\ to \bootstrap4\ if it hasn't already been changed in step 5 above:
 ```
     'yii\bootstrap\BootstrapAsset',
 ```
@@ -130,5 +130,61 @@ b). In the $depend" change:
 ```
     'yii\bootstrap4\BootstrapAsset',
 ```
-9. In _views/country/_form.php_ replace the two instances of **widgets** with **bootstrap4**
-10. In _views/country/_index.php_
+9. In the root of the bootstrap4 folder create the folder: `components\grid` and inside create the following file **ActionColumn.php**:
+```
+<?php
+
+namespace app\components\grid;
+
+use Yii;
+use yii\helpers\Html;
+use yii\helpers\Url;
+
+
+class ActionColumn extends yii\grid\ActionColumn
+{
+
+    protected function initDefaultButtons()
+    {
+        $this->initDefaultButton('view', 'eye-open');
+        $this->initDefaultButton('update', 'pencil');
+        $this->initDefaultButton('delete', 'trash', [
+            'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
+            'data-method' => 'post',
+        ]);
+    }
+
+    protected function initDefaultButton($name, $iconName, $additionalOptions = [])
+    {
+        if (!isset($this->buttons[$name]) && strpos($this->template, '{' . $name . '}') !== false) {
+            $this->buttons[$name] = function ($url, $model, $key) use ($name, $iconName, $additionalOptions) {
+                switch ($name) {
+                    case 'view':
+                        $title = Yii::t('yii', 'View');
+                        break;
+                    case 'update':
+                        $title = Yii::t('yii', 'Update');
+                        break;
+                    case 'delete':
+                        $title = Yii::t('yii', 'Delete');
+                        break;
+                    default:
+                        $title = ucfirst($name);
+                }
+                $options = array_merge([
+                    'title' => $title,
+                    'aria-label' => $title,
+                    'data-pjax' => '0',
+                ], $additionalOptions, $this->buttonOptions);
+                $icon = isset($this->icons[$iconName])
+                    ? $this->icons[$iconName]
+                    : Html::tag('span', '', ['class' => $iconName]);
+                return Html::a($icon, $url, $options);
+            };
+        }
+    }
+}
+```
+
+10. In _views/country/_form.php_ replace the two instances of **widgets** with **bootstrap4**
+11. In _views/country/_index.php_ after `'dataProvider' => $dataProvider,` add: `'pager'=>['class' => \yii\bootstrap4\LinkPager::class],`
