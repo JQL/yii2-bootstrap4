@@ -13,6 +13,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ## How to:
 These are step-by-step instructions but they assume you have some knowledge of web programming, PHP, HTML, CSS and dtabase setup.
+### Preparation
 1. Download and install Composer if you haven't already done so: https://getcomposer.org/download/
 2. Update Composer if required (version 2 required): `composer selfupdate`
 3. Download Yii2 BASIC into the **bootstrap4** folder of your **_htdocs_** folder: `composer create-project --prefer-dist yiisoft/yii2-app-basic bootstrap4`
@@ -41,8 +42,9 @@ return [
 11. Start GII http://localhost/bootstrap4/gii and create a Model called **County** using your default settings. Watch the video if you're uncertain as to which settings to use.
 12. Create a "CRUD" for the Model using your favourite settings. Watch the video if you're uncertain as to which settings to use.
 13. Check it works by running: http://localhost/bootstrap4/country
-14. Add a link in the "Nav::widget" to the _views/layouts/main.php_ to make it easier to access the country page.
+14. Add a link to the _views/layouts/main.php_ in the "Nav::widget" to make it easier to access the country page.
 ```
   ['label' => 'Country', 'url' => ['/country/index']],
 ```
 
+### Installing Twitter Bootstrap 4
