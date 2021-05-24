@@ -72,7 +72,7 @@ AppAsset::register($this);
 
     <footer class="footer">
       <div class="container">
-        <p class="float-left">&copy; J. Lavelle <?= date('Y') ?></p>
+        <p class="float-left">&copy;<?= date('Y') ?> J. Lavelle</p>
 
         <p class="float-right"><?= Yii::powered() ?></p>
       </div>

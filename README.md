@@ -119,20 +119,20 @@ Watch the video from ""
 ```
 <footer class="footer">
   <div class="container">
-    <p class="pull-left">&copy; J. Lavelle <?= date('Y') ?></p>
+    <p class="pull-left">&copy;<?= date('Y') ?> J. Lavelle</p>
 
-              <p class="pull-right"><?= Yii::powered() ?></p>
-        </div>
+    <p class="pull-right"><?= Yii::powered() ?></p>
+  </div>
 </footer>
 ```
 **to:**
 ```
 <footer class="footer">
   <div class="container">
-    <p class="float-left">&copy; J. Lavelle <?= date('Y') ?></p>
+    <p class="float-left">&copy;<?= date('Y') ?> J. Lavelle</p>
 
-              <p class="float-right"><?= Yii::powered() ?></p>
-        </div>
+    <p class="float-right"><?= Yii::powered() ?></p>
+  </div>
 </footer>
 ```
 8. In _assets/AppAsset.php_ make the following changes:
@@ -154,7 +154,7 @@ Watch the video from ""
 ```
     'yii\bootstrap4\BootstrapAsset',
 ```
-9. <font colour="red">**If you are using an older version of Yii2 which _doesn't_ show the icons in _country/index.php_**</font>  then in the root of the bootstrap4 folder create the folder: `components\grid` and inside create the following file **ActionColumn.php**. Note: newer versions of Yii2 have the icons hardcoded into the ActionColumn file so no change is needed:
+9. **If you are using an older version of Yii2 which _doesn't_ show the icons in _country/index.php_**  then in the root of the bootstrap4 folder create the folder: `components\grid` and inside create the following file **ActionColumn.php**. Note: newer versions of Yii2 have the icons hardcoded into the ActionColumn file so no change is needed:
 ```
 <?php
 
@@ -212,7 +212,7 @@ class ActionColumn extends yii\grid\ActionColumn
 ```
 
 10. In <i>views/country/&#95;form.php</i> replace the two instances of **widgets** with **bootstrap4**
-11. In _views/country/index.php_ after `'dataProvider' => $dataProvider,` add: `'pager'=>['class' => \yii\bootstrap4\LinkPager::class],`
+11. In _views/country/index.php_ after `'dataProvider' => $dataProvider,` add: `'pager'=>['class' => \yii\bootstrap4\LinkPager::class],` This fixes the pager widget.
 12. Open http://localhost/bootstrap4 in your browser and check everything works.
 
 
