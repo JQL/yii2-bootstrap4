@@ -125,6 +125,7 @@ Watch the video from ""
     ];
 ```
 
+
     b). In the $depend" change \bootstrap\ to \bootstrap4\ if it hasn't already been changed in step 5 above:
 ```
     'yii\bootstrap\BootstrapAsset',
@@ -149,7 +150,7 @@ class ActionColumn extends yii\grid\ActionColumn
 
     protected function initDefaultButtons()
     {
-        $this->initDefaultButton('view', 'bi bi-eye'); //  'eye-open'
+        $this->initDefaultButton('view', 'bi bi-eye');      //  'eye-open'
         $this->initDefaultButton('update', 'bi bi-pencil'); //  'pencil'
         $this->initDefaultButton('delete', 'bi bi-trash', [ //  'trash'
             'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
