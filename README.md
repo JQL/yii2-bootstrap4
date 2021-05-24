@@ -43,30 +43,63 @@ return [
 12. Create a "CRUD" for the Model using your favourite settings. Watch the video if you're uncertain as to which settings to use.
 13. Check it works by running: http://localhost/bootstrap4/country
 14. Add a link to the _views/layouts/main.php_ in the "Nav::widget" to make it easier to access the country page.
+
 ```
-  ['label' => 'Country', 'url' => ['/country/index']],
+      ['label' => 'Country', 'url' => ['/country/index']],
 ```
 
 ### Installing Twitter Bootstrap 4
 Watch the video from ""
 1. Open Terminal in your _htdocs/bootstrap4_ folder. It is essential you are in the root of your _bootstrap4_ folder.
 2. Uninstall Bootstrap 3 from Yii2:
+
 ```
-  composer remove yiisoft/yii2-bootstrap
+      composer remove yiisoft/yii2-bootstrap
 ```
 
 3. Install Bootstrap 4:
+
 ```
-  composer require yiisoft/yii2-bootstrap4
+      composer require yiisoft/yii2-bootstrap4
 ```
 
 4. If you try to open http://localhost/bootstrap4 you will get errors. **This is normal.**
-5. Using Search and Replace but **excluding** the _vendor_ folder replace:
+5. Using Search and Replace but **excluding** the _vendor_ folder replace the following in all the PHP files:
+
 ```
-  yii\bootstrap\
-
-with
-
-yii\bootstrap4
+      yii\bootstrap\
+with:
+      yii\bootstrap4\
 ```
 
+6. In _views/layouts/main.php_ change these two "use" lines:
+```
+      use app\widgets\Alert;
+      use yii\widgets\Breadcrumbs;
+to:
+      use app\bootstrap4\Alert;
+      use yii\bootstrap4\Breadcrumbs;
+```
+
+7. In the same file change the css in the Navbar as follows:
+```
+      NavBar::begin([
+        'brandLabel' => Yii::$app->name,
+        'brandUrl' => Yii::$app->homeUrl,
+        'options' => [
+          'class' => 'navbar-inverse navbar-fixed-top',
+        ],
+      ]);
+      echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right'],
+to:
+      NavBar::begin([
+        'brandLabel' => Yii::$app->name,
+        'brandUrl' => Yii::$app->homeUrl,
+        'options' => [
+          'class' => 'navbar-expand-lg navbar-dark bg-dark fixed-top',
+        ],
+      ]);
+      echo Nav::widget([
+        'options' => ['class' => 'navbar-nav ml-auto'],
+```
