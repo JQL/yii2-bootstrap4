@@ -12,8 +12,26 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## How to:
-
+These are step-by-step instructions but they assume you have some knowledge of web programming, PHP, HTML, CSS and dtabase setup.
 1. Download and install Composer if you haven't already done so: https://getcomposer.org/download/
-2. Update Composer if required: `composer selfupdate`
+2. Update Composer if required (version 2 required): `composer selfupdate`
 3. Download Yii2 BASIC into the **bootstrap4** folder of your **_htdocs_** folder: `composer create-project --prefer-dist yiisoft/yii2-app-basic bootstrap4`
 4. Create a database called **bootstrap4**
+5. Open Yii2 Basic in your favourite editor. For the video we're using NetBeans (https://netbeans.apache.org/)
+6. In _config/web.php_ uncomment the 'urlManager' section to enable Pretty Urls
+7. In _config/db.php_ enter your database details:
+```
+return [
+    'class' => 'yii\db\Connection',
+    'dsn' => 'mysql:host=localhost;dbname=bootstrap4',
+    'username' => 'root', // enter your username
+    'password' => '',     // enter your password
+    'charset' => 'utf8',
+
+    // Schema cache options (for production environment)
+    //'enableSchemaCache' => true,
+    //'schemaCacheDuration' => 60,
+    //'schemaCache' => 'cache',
+];
+```
+8. Check that everything is working in your browser: http://localhost/bootstrap4/web/index.php
