@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+'bi bi-eye'
+'bi bi-pencil' or 'bi bi-pencil-square'
+'bi bi-trash'
+
+https://www.yiiframework.com/extension/yiisoft/yii2-bootstrap4/doc/guide/2.0/en
+https://www.yiiframework.com/extension/yiisoft/yii2-bootstrap4/doc/guide/2.0/en/migrating-yii2-bootstrap
