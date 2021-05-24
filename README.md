@@ -37,7 +37,7 @@ return [
 ```
 
 8. Check that everything is working in your browser: http://localhost/bootstrap4/index.php You should see the Yii2 Home Page. Open all the pages on the menu to check they are working correctly.
-9. Create some dummy data for the database. Either download the SQL file or create a migration. **Either** run the following SQL in your database manager: https://github.com/JQL/yii2-bootstrap4/blob/main/bootstrap4.sql **Or** copy the _migrations_ folder: https://github.com/JQL/yii2-bootstrap4/tree/main/migrations and place it in the root of the _bootstrap4_ folder and run ```./yii migrate```. **_Do Not Do Both_** Note: This will create a table called **Country** with some dummy data. Watch the video if you're uncertain as how to do this.
+9. Create some dummy data for the database. Either download the SQL file or create a migration. **Either** run the following SQL in your database manager: https://github.com/JQL/yii2-bootstrap4/blob/main/bootstrap4.sql **Or** copy the _migrations_ folder: https://github.com/JQL/yii2-bootstrap4/tree/main/migrations and place it in the root of the _bootstrap4_ folder and run ```./yii migrate```. **_Do Not Do Both_** Note: This will create a table called **Country** with some dummy data. Watch the video if you're uncertain how to do this.
 10. Check that the table exists and is populated with data in your Database Manager.
 11. Start GII http://localhost/bootstrap4/gii and create a Model called **County** using your default settings. Watch the video if you're uncertain as to which settings to use.
 12. Create "CRUD" for the Model using your favourite settings. Watch the video if you're uncertain as to which settings to use.
@@ -191,8 +191,8 @@ class ActionColumn extends yii\grid\ActionColumn
 }
 ```
 
-10. In _views/country/_form.php_ replace the two instances of **widgets** with **bootstrap4**
-11. In _views/country/_index.php_ after `'dataProvider' => $dataProvider,` add: `'pager'=>['class' => \yii\bootstrap4\LinkPager::class],`
+10. In <i>views/country/&#95;form.php</i> replace the two instances of **widgets** with **bootstrap4**
+11. In _views/country/index.php_ after `'dataProvider' => $dataProvider,` add: `'pager'=>['class' => \yii\bootstrap4\LinkPager::class],`
 12. Open http://localhost/bootstrap4 in your browser and check everything works.
 
 
