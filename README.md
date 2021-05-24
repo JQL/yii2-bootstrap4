@@ -68,7 +68,9 @@ Watch the video from ""
 
 ```
       yii\bootstrap\
-with:
+```
+**with:**
+```
       yii\bootstrap4\
 ```
 
@@ -76,7 +78,9 @@ with:
 ```
       use app\widgets\Alert;
       use yii\widgets\Breadcrumbs;
-to:
+```
+**to:**
+```
       use app\bootstrap4\Alert;
       use yii\bootstrap4\Breadcrumbs;
 ```
@@ -92,7 +96,9 @@ to:
       ]);
       echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
-to:
+```
+**to:**
+```
       NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
