@@ -48,7 +48,9 @@ return [
       ['label' => 'Country', 'url' => ['/country/index']],
 ```
 
-We now have a fully operational site using Yii2 and Bootstrap 3
+We now have a fully operational site using Yii2 and Bootstrap 3.
+
+Note: if you have a template on your system like AdminLTE which uses Twitter Bootstrap 3 then upgrading will break the template and you will need to edit the template's css.
 
 
 ### Installing and configuring Twitter Bootstrap 4 on Yii2
