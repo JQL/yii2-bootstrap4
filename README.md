@@ -1,4 +1,4 @@
-# How to upgrade YII2 to Twitter Bootstrap 4
+# How to upgrade YII2 to Bootstrap 4
 
 © 2021 J. Lavelle (http://jlavelle.uk) all rights reserved
 
@@ -50,10 +50,10 @@ return [
 
 We now have a fully operational site using Yii2 and Bootstrap 3.
 
-Note: if you have a template on your system like AdminLTE which uses Twitter Bootstrap 3 then upgrading will break the template and you will need to edit the template's css.
+Note: if you have a template on your system like AdminLTE which uses Bootstrap 3 then upgrading will break the template and you will need to edit the template's css.
 
 
-### Installing and configuring Twitter Bootstrap 4 on Yii2
+### Installing and configuring Bootstrap 4 on Yii2
 Watch the video from ""
 1. Open Terminal in your _htdocs/bootstrap4_ folder. It is essential you are in the root of your _bootstrap4_ folder.
 2. Uninstall Bootstrap 3 from Yii2:
